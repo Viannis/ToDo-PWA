@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./js/materialize.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/img/icons/ToDo-64x64.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#f3999d">
+    <meta name="theme-color" content="#f3999d">
+</head>
+
+<body>
+    <div class="">
+        <nav>
+            <div class="nav- container">
+                <a href="\" class="brand-logo">ToDo</a>
+                <a href="#" data-target="side-menu" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/contact.html">Contact</a></li>
+                    <li><a href="/pages/about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav side-menu" id="side-menu">
+            <li>
+                <h5 class="sideNavTitle">ToDo</h5>
+            </li>
+            <div class="divider"></div>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+        </ul>
+
+        <div class="todolist">
+            
+        </div>
+
+        <a class="btn-floating btn-large waves-effect waves-light red addButton sidenav-trigger"
+            data-target="side-form"><i class="material-icons">add</i></a>
+
+        <div id="side-form" class="sidenav side-form">
+            <form class="add-todo container section">
+                <h6>New ToDo</h6>
+                <div class="divider"></div>
+                <div class="formInput">
+                    <div class="input-field">
+                        <input type="text" placeholder="Add ToDo" id="title" class="validate">
+                        <label for="title">ToDo</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Add Description" id="description" class="validate">
+                        <label for="description">Description</label>
+                    </div>
+                    <div class="input-field center">
+                        <button class="btn-small">Add</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script> -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB8ssZR5MZFFdNpC7aTPq8nmVm1qwQ5zkI",
+            authDomain: "todo-37237.firebaseapp.com",
+            databaseURL: "https://todo-37237.firebaseio.com",
+            projectId: "todo-37237",
+            storageBucket: "todo-37237.appspot.com",
+            messagingSenderId: "550431961783",
+            appId: "1:550431961783:web:7680b685f0d20fa7a11332",
+            measurementId: "G-60CB2ZDWCG"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        //firebase.analytics();
+    </script>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/db.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+
+</html>
